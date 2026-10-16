@@ -1,0 +1,5 @@
+Redis and Memcached are both in-memory key-value stores used for caching, but they differ in scope. Use Memcached for a simple, memory-efficient cache of serialized objects. Use Redis when you also need structured data, atomic operations on that data, durability, or messaging.
+
+Memcached is deliberately minimal. It stores strings or blobs under keys, is multithreaded, and has no persistence. It scales horizontally because clients hash keys across nodes rather than the server coordinating them. That simplicity makes it fast and predictable for plain object caching at high concurrency.
+
+Redis offers much more. Its data structures include hashes, lists, sets, sorted sets, and streams. It persists data through snapshots or an append-only log, and it adds replication, pub/sub, transactions, Lua scripting, and built-in clustering. Command execution is largely single-threaded, although recent versions add I/O threading.
