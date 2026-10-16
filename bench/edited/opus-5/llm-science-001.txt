@@ -1,0 +1,7 @@
+The sky looks blue because air molecules scatter blue light much more strongly than red light. The effect is called Rayleigh scattering.
+
+Sunlight contains all visible wavelengths. As it crosses the atmosphere, air molecules scatter the shorter wavelengths, blue and violet, far more strongly than the longer ones, red and orange. Scattering strength is roughly proportional to the inverse fourth power of wavelength.
+
+Violet scatters even more strongly than blue. We still see blue for two reasons: the Sun emits less violet light, and our eyes respond more strongly to blue. The scattered light reaching us from the whole sky overhead therefore looks blue.
+
+At sunrise and sunset, sunlight passes through much more atmosphere. Most of the blue light scatters out of the direct beam, and the light that remains looks red and orange.

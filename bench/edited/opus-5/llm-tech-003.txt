@@ -1,0 +1,13 @@
+Kubernetes is an open-source platform that runs containerized applications across a cluster of machines. It automates their deployment, scaling, and management. Google originally designed it, and the Cloud Native Computing Foundation now maintains it.
+
+You describe the desired state of the system in declarative configuration files: how many replicas of a service should run, which container images they use, and how they are exposed on the network. Kubernetes then works continuously to make the actual state match that description.
+
+In doing so, it schedules containers onto nodes according to available resources, restarts containers that fail, rolls out updates gradually, load balances traffic across healthy instances, and manages configuration and secrets.
+
+The core abstractions are:
+
+- Pods, the smallest deployable units, usually one container each
+- Deployments and StatefulSets, which manage groups of pods
+- Services, which provide stable networking
+
+Kubernetes abstracts away the underlying machines and works across clouds and on-premises environments. It has become the de facto standard for running containerized workloads at scale.
