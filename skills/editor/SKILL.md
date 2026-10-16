@@ -1,6 +1,6 @@
 ---
 name: editor
-description: Edit, revise, proofread, or critique text for accuracy, clarity, structure, concision, consistency, tone, and mechanics. Use when the user asks to improve writing, rewrite or polish text, review documentation, correct grammar, tighten prose, compare drafts, or explain editorial changes.
+description: Edit, revise, proofread, restructure, or critique text for accuracy, clarity, structure, concision, consistency, tone, and mechanics. Use when the user asks to improve writing, rewrite or polish text, reorganize it for readability, review documentation, correct grammar, tighten prose, compare drafts, or explain editorial changes.
 licence: MIT
 ---
 
@@ -31,18 +31,29 @@ Match the requested editing level:
 - **Proofread:** Correct spelling, grammar, punctuation, and obvious usage errors. Preserve wording and structure where possible.
 - **Copyedit:** Also improve clarity, consistency, syntax, terminology, and local flow.
 - **Revise:** Reorganize and rewrite as needed while preserving meaning and evidence.
+- **Restructure:** Focus on organization and presentation for readability: reorder sections, group related ideas, split dense paragraphs, and use headings or lists where useful. Rewrite only as needed to connect the reorganized text.
 - **Critique:** Diagnose problems and recommend changes without silently rewriting the entire text.
 
-If the user does not specify a level, make the smallest edit that fully solves the evident problems.
+If the user does not specify a level, make the smallest edit that fully solves the evident wording problems. Preserve the sequence of ideas and the overall structure: do not move later prerequisites to the beginning, reorder sections, or convert prose into a list without permission. Recommend those changes instead.
+
+### Offer restructuring when useful
+
+Editing and restructuring are separate options. A request to edit, polish, or improve readability does not by itself authorize substantial reorganization. An explicit request to revise, restructure, or reorganize does; proceed without asking again.
+
+When the main point is buried, related ideas are scattered, or dense paragraphs obscure the logic, briefly recommend restructuring as an optional next step. Name the specific benefit, such as grouping prerequisites before instructions or separating decisions from background.
+
+Complete the requested edit first, then offer the option in a short note. Do not withhold the edit to ask the user to choose, produce a second restructured version unless requested, or recommend restructuring when local edits are enough. Honor requests to preserve the structure or return only the edited text.
+
+When restructuring is requested, choose the organization that best serves the reader. Preserve every factual claim, qualification, prerequisite, and dependency; do not force prose into headings or lists when paragraphs work better.
 
 ## Editing workflow
 
 1. Identify the text's main point and intended reader.
 2. Mark claims whose meaning, evidence, or certainty must remain unchanged.
 3. Fix factual contradictions and ambiguities only when the source text provides enough information. Otherwise flag them.
-4. Put the main point where the reader needs it.
-5. Order supporting information by logic, chronology, or importance.
-6. Give each paragraph one job.
+4. Within the agreed editing level, put the main point where the reader needs it.
+5. When restructuring is authorized, order supporting information by logic, chronology, or importance.
+6. Give each paragraph one job; preserve the overall organization unless restructuring is authorized.
 7. Replace vague abstractions with concrete nouns and verbs.
 8. Remove repetition, filler, throat-clearing, and empty transitions.
 9. Split sentences that require rereading; combine fragments only when the relationship becomes clearer.
@@ -90,7 +101,7 @@ Before delivering, verify that:
 - the revision answers the same question as the source
 - no facts, constraints, or qualifications disappeared
 - pronouns and references have clear antecedents
-- paragraphs and lists are logically ordered
+- paragraphs and lists are clear within the agreed scope; larger ordering problems are flagged when restructuring is not authorized
 - terminology is consistent
 - examples support the stated point
 - the opening earns attention and the ending stops cleanly
